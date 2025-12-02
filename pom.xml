@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zzyy.study</groupId>
@@ -10,9 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>https://ai.com</url>
-    <modules>
-        <module>langchain4j-01helloworld</module>
-    </modules>
     <description>langchain4j-zyfan 配套源码</description>
 
     <properties>
@@ -38,7 +34,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!-- 加载 bom 后，所有 langchain4j 引用不需要加版本号 -->
             <dependency>
                 <groupId>dev.langchain4j</groupId>
                 <artifactId>langchain4j-bom</artifactId>
@@ -58,5 +54,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

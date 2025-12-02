@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/langchain4j-01helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/langchain4j-02chatapi/pom.xml" />
       </list>
     </option>
   </component>
