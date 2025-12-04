@@ -1,11 +1,14 @@
 package com.zzyy.study.config;
 
+import com.zzyy.study.listener.TestChatModelListener;
 import com.zzyy.study.service.ChatAssistant;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.service.AiServices;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.List;
 
 /**
  * ClassName: ChatLanguageModelConfig
@@ -25,6 +28,7 @@ public class ChatLanguageModelConfig {
                 .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
                 .logRequests(true) //日志级别设置为debug才有效
                 .logResponses(true)
+                .listeners(List.of(new TestChatModelListener()))
                 .build();
     }
 
