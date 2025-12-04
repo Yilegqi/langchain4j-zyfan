@@ -13,16 +13,18 @@ import org.springframework.context.annotation.Configuration;
  * Description:
  *
  * @Author Yilegqi
- * @Create 2025/12/2 10:59 AM * @Version 1.0
+ * @Create 2025/12/3 2:06 PM * @Version 1.0
  */
-@Configuration(proxyBeanMethods = false)
+@Configuration
 public class ChatLanguageModelConfig {
     @Bean
-    public ChatLanguageModel chatLanguageModel() {
+    public ChatLanguageModel chatLanguageModel(){
         return OpenAiChatModel.builder()
                 .apiKey(System.getenv("LANGCHAIN4J_KEY"))
                 .modelName("qwen-turbo-0624")
                 .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
+                .logRequests(true) //日志级别设置为debug才有效
+                .logResponses(true)
                 .build();
     }
 

@@ -1,8 +1,8 @@
 package com.zzyy.study.controller;
 
 import com.zzyy.study.service.ChatAssistant;
-import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.data.message.AiMessage;
+import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.output.Response;
 import jakarta.annotation.Resource;
@@ -10,8 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.awt.*;
 
 /**
  * ClassName: ChatLanguageModelController

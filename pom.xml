@@ -9,6 +9,9 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>https://ai.com</url>
+    <modules>
+        <module>langchain4j-03chatapi-config</module>
+    </modules>
     <description>langchain4j-zyfan 配套源码</description>
 
     <properties>
